@@ -1,12 +1,8 @@
 ﻿namespace WorldOfSoftuniRPG
 {
-    using WorldOfSoftuniRPG.Forms;
-    using Core;
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
     using System.Windows.Forms;
+    using WorldOfSoftuniRPG.Forms;
 
     static class MainGame
     {

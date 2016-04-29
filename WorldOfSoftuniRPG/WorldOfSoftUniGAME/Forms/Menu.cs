@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using WorldOfSoftuniRPG.Core;
-using System.Media;
-
-
-namespace WorldOfSoftuniRPG.Forms
+﻿namespace WorldOfSoftuniRPG.Forms
 {
+    using System;
+    using System.Drawing;
+    using System.Media;
+    using System.Windows.Forms;
+    using WorldOfSoftuniRPG.Core;
+    using WorldOfSoftuniRPG.Properties;
+
     public partial class Frm_Menu : Form
     {
         private SoundPlayer menuPlayer = new SoundPlayer();
@@ -26,15 +20,19 @@ namespace WorldOfSoftuniRPG.Forms
             this.bt_StartGame.Visible = false;
             this.bt_Exit.Visible = false;
 
-            Image image =
-                Image.FromFile(
-                    @"C:\Users\PC-PC\Desktop\World-Of-SoftUni\WorldOfSoftuniRPG\WorldOfSoftUniGAME\Forms\Resources\tumblr_ni186jsRPw1skb54qo1_500.gif");
+            Image image = new Bitmap(Resources.tumblr_ni186jsRPw1skb54qo1_500);
+            //Image image =
+            //    Image.FromFile(
+            //        @"C:\Users\PC-PC\Desktop\World-Of-SoftUni\WorldOfSoftuniRPG\WorldOfSoftUniGAME\Resources\tumblr_ni186jsRPw1skb54qo1_500.gif");
             this.pictureBox1.Image = image;
             this.pictureBox1.Height = image.Height;
             this.pictureBox1.Width = image.Width;
-            this.menuPlayer = new SoundPlayer(@"C:\Users\PC-PC\Desktop\World-Of-SoftUni\WorldOfSoftuniRPG\WorldOfSoftUniGAME\Forms\Resources\menu.wav");
+            this.menuPlayer = new SoundPlayer(Resources.menu);
             this.menuPlayer.Play();
         }
+
+        
+       
 
         private void bt_StartGame_Click(object sender, EventArgs e)
         {

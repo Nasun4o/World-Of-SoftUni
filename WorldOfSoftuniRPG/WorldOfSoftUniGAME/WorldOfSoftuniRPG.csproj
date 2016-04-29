@@ -118,8 +118,15 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Forms\Resources\" />
+    <None Include="Resources\menu.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pick.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblr_ni186jsRPw1skb54qo1_500.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

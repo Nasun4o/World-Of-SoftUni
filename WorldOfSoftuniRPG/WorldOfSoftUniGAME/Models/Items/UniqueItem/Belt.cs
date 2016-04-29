@@ -1,8 +1,7 @@
 ﻿namespace WorldOfSoftuniRPG.Models.Items.AttackItems
 {
-    using WorldOfSoftuniRPG.Interafaces;
+    using WorldOfSoftuniRPG.Enumerations;
     using WorldOfSoftuniRPG.Models.Items.UniqueItem;
-    using Enumerations;
 
     public class Belt : DefenceAttack
     { 
@@ -31,12 +30,12 @@
             {
                 switch (this.ItemType)
                 {
-                    case ItemType.Common: return Belt.CommonDefence;
-                    case ItemType.Uncommon: return Belt.UncommonDefence;
-                    case ItemType.Rare: return Belt.RareDefence;
-                    case ItemType.Magic: return Belt.MagicDefence;
-                    case ItemType.Legendary: return Belt.LegendaryDefence;
-                    default: return Belt.CommonDefence;
+                    case ItemType.Common: return CommonDefence;
+                    case ItemType.Uncommon: return UncommonDefence;
+                    case ItemType.Rare: return RareDefence;
+                    case ItemType.Magic: return MagicDefence;
+                    case ItemType.Legendary: return LegendaryDefence;
+                    default: return CommonDefence;
                 }
             }
         }
@@ -47,12 +46,12 @@
             {
                 switch (this.ItemType)
                 {
-                    case ItemType.Common: return Belt.CommonAttack;
-                    case ItemType.Uncommon: return Belt.UncommonAttack;
-                    case ItemType.Rare: return Belt.RareAttack;
-                    case ItemType.Magic: return Belt.MagicAttack;
-                    case ItemType.Legendary: return Belt.LegendaryAttack;
-                    default: return Belt.CommonAttack;
+                    case ItemType.Common: return CommonAttack;
+                    case ItemType.Uncommon: return UncommonAttack;
+                    case ItemType.Rare: return RareAttack;
+                    case ItemType.Magic: return MagicAttack;
+                    case ItemType.Legendary: return LegendaryAttack;
+                    default: return CommonAttack;
                 }
             }
         }

@@ -2,10 +2,8 @@
 {
     using System.Collections.Generic;
     using System.Text;
-
-    using Enumerations;
-    using Players;
-    using System;
+    using WorldOfSoftuniRPG.Enumerations;
+    using WorldOfSoftuniRPG.Models.Players;
 
     public class BattleField : Field
     {
@@ -34,12 +32,12 @@
         {
             get
             {
-                return BattleField.enemies;
+                return enemies;
             }
 
             set
             {
-                BattleField.enemies = value;
+                enemies = value;
             }
         }
 
@@ -47,12 +45,12 @@
         {
             get
             {
-                return BattleField.targetEnemy;
+                return targetEnemy;
             }
 
             set
             {
-                BattleField.targetEnemy = value;
+                targetEnemy = value;
             }
         }
 
@@ -67,7 +65,7 @@
             printBattleField.AppendLine("For attack emeny enter command \"attack\" + \"enemy name\" ");
             printBattleField.AppendLine("-------------------------------------------------------------------------------");
 
-            if (BattleField.Enemies != null && BattleField.Enemies.Count > 0)
+            if (Enemies != null && Enemies.Count > 0)
             {
                 const int MaxCellSize = 13;
                 printBattleField.Append("Type".PadRight(MaxCellSize, ' '));
@@ -76,7 +74,7 @@
                 printBattleField.Append("Defence".PadRight(MaxCellSize, ' '));
                 printBattleField.Append("Health".PadRight(MaxCellSize, ' '));
                 printBattleField.AppendLine("Left".PadRight(MaxCellSize));
-                foreach (var enemy in BattleField.Enemies)
+                foreach (var enemy in Enemies)
                 {
                     printBattleField.AppendLine(enemy.ToString());
                 }

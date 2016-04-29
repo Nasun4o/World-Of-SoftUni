@@ -1,8 +1,6 @@
 ﻿namespace WorldOfSoftuniRPG.Models.Fields
 {
-    using System.Text;
-
-    using Players;
+    using WorldOfSoftuniRPG.Models.Players;
 
     public abstract class Field
     {

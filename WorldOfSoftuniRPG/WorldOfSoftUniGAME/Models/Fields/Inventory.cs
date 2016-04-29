@@ -1,9 +1,7 @@
 ﻿namespace WorldOfSoftuniRPG.Models.Fields
 {
     using System.Collections.Generic;
-
-    using Interafaces;
-    using System;
+    using WorldOfSoftuniRPG.Interafaces;
 
     public class Inventory
     {

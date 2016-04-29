@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Media;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using WorldOfSoftuniRPG.Core;
-using WorldOfSoftuniRPG.Models.Fields;
-using WorldOfSoftuniRPG.Models.Players;
-
-namespace WorldOfSoftuniRPG.Forms
+﻿namespace WorldOfSoftuniRPG.Forms
 {
+    using System;
+    using System.Media;
+    using System.Windows.Forms;
+    using WorldOfSoftuniRPG.Core;
+    using WorldOfSoftuniRPG.Models.Fields;
+    using WorldOfSoftuniRPG.Models.Players;
+    using WorldOfSoftuniRPG.Properties;
+
     public partial class Frm_HeroSelection : Form
     {
         private SoundPlayer music;
@@ -36,7 +30,7 @@ namespace WorldOfSoftuniRPG.Forms
 
         private void HeroSelection_Load(object sender, EventArgs e)
         {
-            this.music = new SoundPlayer(@"C:\Users\PC-PC\Desktop\World-Of-SoftUni\WorldOfSoftuniRPG\WorldOfSoftUniGAME\Forms\Resources\pick.wav");
+            this.music = new SoundPlayer(Resources.pick);
             this.music.Play();
             this.pic_Mage.Visible = false;
             this.pic_Warrior.Visible = false;
